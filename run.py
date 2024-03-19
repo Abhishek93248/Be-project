@@ -37,8 +37,8 @@ if response.status_code == 200:
     image = Image.open(BytesIO(response.content))
     
     # Create the output directory if it doesn't exist
-    output_dir = '/content/output'
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = '/content/output/'
+    
     
     # Save the image to the output directory with the name "image1.png"
     output_path = os.path.join(output_dir, 'image1.png')
