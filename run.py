@@ -27,7 +27,7 @@ from PIL import Image
 from io import BytesIO
 
 # URL of the image
-url = 'https://levihsu-ootdiffusion.hf.space/--replicas/yowcm/file='+result
+url = 'https://levihsu-ootdiffusion.hf.space/--replicas/yowcm/file='+result[0]
 
 # Send a GET request to the URL to download the image
 response = requests.get(url)
