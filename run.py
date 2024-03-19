@@ -38,7 +38,7 @@ if response.status_code == 200:
     image = Image.open(BytesIO(response.content))
     
     # Save the image to the output directory
-    output_path = '/content/output/model_1.png'
+    output_path = '/content/output/'
     image.save(output_path)
     
     print(f'Image saved successfully at: {output_path}')
