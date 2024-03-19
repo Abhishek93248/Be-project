@@ -34,11 +34,14 @@ response = requests.get(url)
 
 # Check if the request was successful
 if response.status_code == 200:
-    # Open the image using PIL
     image = Image.open(BytesIO(response.content))
     
-    # Save the image to the output directory
-    output_path = '/content/output/'
+    # Create the output directory if it doesn't exist
+    output_dir = '/content/output'
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Save the image to the output directory with the name "image1.png"
+    output_path = os.path.join(output_dir, 'image1.png')
     image.save(output_path)
     
     print(f'Image saved successfully at: {output_path}')
