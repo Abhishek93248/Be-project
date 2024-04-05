@@ -1,6 +1,6 @@
 from gradio_client import Client
 
-client = Client("https://levihsu-ootdiffusion.hf.space/--replicas/yowcm/")
+client = Client("https://levihsu-ootdiffusion.hf.space/--replicas/1b6rr/")
 result = client.predict(
 		"/content/model.jpg",	# filepath  in 'Model' Image component
 		"/content/garment.jpg",	# filepath  in 'Garment' Image component
