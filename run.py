@@ -11,16 +11,17 @@ result = client.predict(
 		api_name="/process_hd"
 )
 
-import requests
+
 from PIL import Image
 import io
 # URL of the image
-image_url = "https://levihsu-ootdiffusion.hf.space/--replicas/yowcm/file=" + result[0]['image']
+print(result[0]['image'])
+image_url = "https://levihsu-ootdiffusion.hf.space/--replicas/1b6rr/file=" + result[0]['image']
 
 # Send a GET request to the URL to download the image
 
 response = requests.get(image_url)
-print(response)
+
 image = Image.open(io.BytesIO(response.content))
 # image = Image.open(response.raw)
 # # Open the image using PIL
