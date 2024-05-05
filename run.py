@@ -1,6 +1,6 @@
 from gradio_client import Client
 
-client = Client("https://levihsu-ootdiffusion.hf.space/--replicas/1b6rr/")
+client = Client("https://levihsu-ootdiffusion.hf.space/--replicas/sfxdg/")
 result = client.predict(
 		"/content/model.jpg",	# filepath  in 'Model' Image component
 		"/content/garment.jpg",	# filepath  in 'Garment' Image component
@@ -16,7 +16,7 @@ from PIL import Image
 import io
 # URL of the image
 print(result[0]['image'])
-image_url = "https://levihsu-ootdiffusion.hf.space/--replicas/1b6rr/file=" + result[0]['image']
+image_url = "https://levihsu-ootdiffusion.hf.space/--replicas/sfxdg/file=" + result[0]['image']
 
 # Send a GET request to the URL to download the image
 
